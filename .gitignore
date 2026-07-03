@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+.eggs/
+
+# Native C++ extensions 
+*.so
+*.pyd
+*.dll
+
+# PyInstaller
+build/
+dist/
+*.spec.bak
+
+# Virtual environments / Conda
+.venv/
+venv/
+env/
+lib/
+# IDE / editor
+.vscode/
+.idea/
+.claude/
+
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,37 @@
+name: taot
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Python target version
+  - python=3.13
+
+  # ── NATIVE C++ STACK ──────────────────────────────────────────────────────────
+  # C++ headers + shared libs required by build_cpp.py (pkg-config / OPENCV_DIR)
+  # NOTE: conda's opencv Python bindings are excluded — opencv-contrib-python (pip)
+  # is used instead because it embeds the ffmpeg codecs missing from conda's build.
+  - libopencv>=4.9.0
+  # FFmpeg binary for video preprocessing pipeline
+  - ffmpeg>=6.1.0
+  # Essential for fast array manipulations and backend compatibility with pybind11
+  - numpy>=1.26.0
+
+  # ── C++ BINDING LAYERS ────────────────────────────────────────────────────────
+  - pybind11>=2.12.0
+
+  # ── BUILD SYSTEM ──────────────────────────────────────────────────────────────
+  - setuptools>=69.0.0
+
+  # ── GUI INTERFACE ─────────────────────────────────────────────────────────────
+  - pyqt>=6.6.1
+
+  # ── ANALYSIS & VISUALISATION ──────────────────────────────────────────────────
+  - pandas>=2.2.0
+
+  # ── DEPLOYMENT & PACKAGING ────────────────────────────────────────────────────
+  - pyinstaller>=6.5.0
+
+  # ── PIP INSTALL (Inside conda env) ──────────────────────────────────
+  - pip
+  - pip:
+      - opencv-contrib-python>=4.9.0.80
