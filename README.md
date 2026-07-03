@@ -76,7 +76,7 @@ python app.py
 pyinstaller taot_installer.spec
 ```
 
-You may need [ffmpeg binary file](https://ffbinaries.com/downloads#version_6.1) to compile the executable.
+You may need [ffmpeg binary file](https://ffbinaries.com/downloads#version_6.1) to compile the executable, and place it inside the "lib" folder.
 
 ---
 

@@ -30,6 +30,7 @@ Click a video in the queue to display its settings in the right panel. Tracking 
 3. Click 4 points to define the arena boundary (the polygon can be non-rectangular)
 4. Confirm by closing the window
 
+You can also choose circular ROI.
 <img src="tuto/track_roi_tuto.gif" width="480" alt="4-point ROI selection on a video frame">
 
 ### Intrusion detector
@@ -143,7 +144,7 @@ app.py  (MainWindow - PyQt6)
 `MainWindow` is the main PyQt6 window. It manages:
 
 - the video queue (`videos_data`, list of dicts),
-- per-video ROIs (4-point polygon for the tracker, rectangle for intrusion),
+- per-video ROIs (4-point polygon or circle for the tracker, rectangle for intrusion),
 - global parameters (FPS, scale factor, GPU, minimum duration),
 - full session import/export via a `settings_*.json` file.
 
